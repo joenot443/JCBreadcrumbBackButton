@@ -6,23 +6,24 @@
 //  Copyright © 2016 Joe Crozier. All rights reserved.
 //
 
-#import "BreadCrumbBarButtonItem.h"
-#import "BreadCrumbMenuTableViewController.h"
+#import "JCBreadCrumbBarButtonItem.h"
+#import "JCBreadCrumbMenuTableViewController.h"
 
-@interface BreadCrumbBarButtonItem()
+@interface JCBreadCrumbBarButtonItem()
 
 @property (nonatomic, strong) UIButton *backButton;
 
 @end
 
-@implementation BreadCrumbBarButtonItem
+@implementation JCBreadCrumbBarButtonItem
 
 - (instancetype)initBreadCrumbBarButtonItem {
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.backButton setImage:[[UIImage imageNamed:@"BackButton"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    self.backButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.backButton setTitle:@"  Back" forState:UIControlStateNormal];
     [self.backButton setTitleColor:self.backButton.tintColor forState:UIControlStateNormal];
-    [self.backButton setFrame:CGRectMake(0, 0, 110, 50)];
+    [self.backButton setFrame:CGRectMake(0, 0, 110, 25)];
     UILongPressGestureRecognizer *breadCrumbRecognizerLongPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buttonLongPress:)];
     breadCrumbRecognizerLongPress.minimumPressDuration = 0.5;
     UITapGestureRecognizer *breadCrumbRecognizerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapped:)];
@@ -34,13 +35,8 @@
 }
 
 - (void)buttonLongPress: (UIGestureRecognizer *)gestureRecognizer {
-    switch (gestureRecognizer.state) {
-        case UIGestureRecognizerStateBegan:
-            NSLog(@"Long press started");
-            [self showBreadCrumbMenu];
-            break;
-        default:
-            break;
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        [self showBreadCrumbMenu];
     }
 }
 
@@ -49,12 +45,16 @@
 }
 
 - (void)showBreadCrumbMenu {
-    BreadCrumbMenuTableViewController *tableViewController = [[BreadCrumbMenuTableViewController alloc] initWithViewControllerStack:self.parentController.navigationController.viewControllers];
+    JCBreadCrumbMenuTableViewController *tableViewController = [[JCBreadCrumbMenuTableViewController alloc] initWithViewControllerStack:self.parentController.navigationController.viewControllers];
     tableViewController.modalPresentationStyle = UIModalPresentationPopover;
-    [self.parentController presentViewController:tableViewController animated:YES completion:nil];
+    UIPopoverPresentationController *presentationController = [tableViewController popoverPresentationController];
+    presentationController.permittedArrowDirections = UIPopoverArrowDirectionUp;
+    presentationController.sourceView = self.customView;
+    presentationController.sourceRect = self.customView.frame;
+    [presentationController setDelegate:(UIViewController <UIPopoverPresentationControllerDelegate> *)self.parentController.navigationController];
     tableViewController.parentNavigationController = self.parentController.navigationController;
-    tableViewController.popoverPresentationController.sourceRect = self.customView.frame;
-    tableViewController.popoverPresentationController.sourceView = self.customView;
+    [self.parentController presentViewController:tableViewController animated:YES completion:nil];
+    
 }
 
 @end

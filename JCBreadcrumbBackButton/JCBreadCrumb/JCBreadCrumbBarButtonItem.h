@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BreadCrumbBarButtonItem : UIBarButtonItem
+@interface JCBreadCrumbBarButtonItem : UIBarButtonItem
 
 @property (nonatomic, weak) UIViewController *parentController;
 

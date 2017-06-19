@@ -6,13 +6,13 @@
 //  Copyright © 2016 Joe Crozier. All rights reserved.
 //
 
-#import "BreadCrumbMenuTableViewController.h"
+#import "JCBreadCrumbMenuTableViewController.h"
 
-@interface BreadCrumbMenuTableViewController ()
+@interface JCBreadCrumbMenuTableViewController ()
 
 @end
 
-@implementation BreadCrumbMenuTableViewController
+@implementation JCBreadCrumbMenuTableViewController
 
 static NSString * const breadCrumbReuseIdentifier = @"BreadCrumbReuse";
 static const CGFloat CellHeight     = 50.0f;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainNavigationController.h
 //  JCBreadcrumbBackButton
 //
 //  Created by Joe Crozier on 2017-06-14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainNavigationController : UINavigationController <UIPopoverPresentationControllerDelegate>
 
 
 @end

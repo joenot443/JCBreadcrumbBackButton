@@ -7,7 +7,7 @@
 //
 
 #import "DummyViewController.h"
-#import "BreadCrumbBarButtonItem.h"
+#import "JCBreadCrumbBarButtonItem.h"
 
 @interface DummyViewController ()
 
@@ -26,12 +26,17 @@
 }
 
 - (void)viewDidLoad {
-    BreadCrumbBarButtonItem *breadCrumBarButton = [[BreadCrumbBarButtonItem alloc] initBreadCrumbBarButtonItem];
-    breadCrumBarButton.parentController = self;
-    self.navigationItem.leftBarButtonItems = @[breadCrumBarButton];
+    if (self.navigationController.viewControllers.count != 1) {
+        JCBreadCrumbBarButtonItem *breadCrumbBarButton = [[JCBreadCrumbBarButtonItem alloc] initBreadCrumbBarButtonItem];
+        breadCrumbBarButton.parentController = self;
+        self.navigationItem.hidesBackButton = YES;
+        self.navigationItem.leftBarButtonItems = @[breadCrumbBarButton];
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        [negativeSpacer setWidth:-20];
+        self.navigationItem.leftBarButtonItems = @[negativeSpacer, breadCrumbBarButton];
+    }
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    
     UIButton *generateButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [generateButton setTitle:@"Give us another!" forState:UIControlStateNormal];
     generateButton.translatesAutoresizingMaskIntoConstraints = NO;

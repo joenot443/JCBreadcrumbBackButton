@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BreadCrumbMenuTableViewController.h"
+#import "JCBreadCrumbMenuTableViewController.h"
 
 @interface DummyViewController : UIViewController
 

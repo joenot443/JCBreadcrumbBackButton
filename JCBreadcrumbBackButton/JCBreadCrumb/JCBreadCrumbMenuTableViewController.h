@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainNavigationViewController.h"
 
-@interface BreadCrumbMenuTableViewController : UITableViewController
+@interface JCBreadCrumbMenuTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *viewControllerStack;
 @property (nonatomic, strong) UINavigationController *parentNavigationController;

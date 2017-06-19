@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		F42A75771EF18F4E00F8D5F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A75761EF18F4E00F8D5F5 /* main.m */; };
 		F42A757A1EF18F4E00F8D5F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A75791EF18F4E00F8D5F5 /* AppDelegate.m */; };
-		F42A757D1EF18F4E00F8D5F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A757C1EF18F4E00F8D5F5 /* ViewController.m */; };
+		F42A757D1EF18F4E00F8D5F5 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A757C1EF18F4E00F8D5F5 /* MainNavigationController.m */; };
 		F42A75801EF18F4F00F8D5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42A757E1EF18F4F00F8D5F5 /* Main.storyboard */; };
 		F42A75821EF18F4F00F8D5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42A75811EF18F4F00F8D5F5 /* Assets.xcassets */; };
 		F42A75851EF18F4F00F8D5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42A75831EF18F4F00F8D5F5 /* LaunchScreen.storyboard */; };
+		F42A758E1EF18F9B00F8D5F5 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A758D1EF18F9B00F8D5F5 /* DummyViewController.m */; };
+		F4F2C9D11EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2C9CE1EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.m */; };
+		F4F2C9D21EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2C9D01EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		F42A75761EF18F4E00F8D5F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F42A75781EF18F4E00F8D5F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F42A75791EF18F4E00F8D5F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F42A757B1EF18F4E00F8D5F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F42A757C1EF18F4E00F8D5F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F42A757B1EF18F4E00F8D5F5 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		F42A757C1EF18F4E00F8D5F5 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		F42A757F1EF18F4F00F8D5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F42A75811EF18F4F00F8D5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42A75841EF18F4F00F8D5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42A75861EF18F4F00F8D5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42A758C1EF18F9B00F8D5F5 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
+		F42A758D1EF18F9B00F8D5F5 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
+		F4F2C9CD1EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JCBreadCrumbBarButtonItem.h; path = JCBreadCrumb/JCBreadCrumbBarButtonItem.h; sourceTree = "<group>"; };
+		F4F2C9CE1EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JCBreadCrumbBarButtonItem.m; path = JCBreadCrumb/JCBreadCrumbBarButtonItem.m; sourceTree = "<group>"; };
+		F4F2C9CF1EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JCBreadCrumbMenuTableViewController.h; path = JCBreadCrumb/JCBreadCrumbMenuTableViewController.h; sourceTree = "<group>"; };
+		F4F2C9D01EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JCBreadCrumbMenuTableViewController.m; path = JCBreadCrumb/JCBreadCrumbMenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +69,12 @@
 			children = (
 				F42A75781EF18F4E00F8D5F5 /* AppDelegate.h */,
 				F42A75791EF18F4E00F8D5F5 /* AppDelegate.m */,
-				F42A757B1EF18F4E00F8D5F5 /* ViewController.h */,
-				F42A757C1EF18F4E00F8D5F5 /* ViewController.m */,
+				F42A757B1EF18F4E00F8D5F5 /* MainNavigationController.h */,
+				F42A757C1EF18F4E00F8D5F5 /* MainNavigationController.m */,
 				F42A757E1EF18F4F00F8D5F5 /* Main.storyboard */,
+				F42A758C1EF18F9B00F8D5F5 /* DummyViewController.h */,
+				F42A758D1EF18F9B00F8D5F5 /* DummyViewController.m */,
+				F4F2C9D31EF824C300AE0E9E /* JCBreadCrumb */,
 				F42A75811EF18F4F00F8D5F5 /* Assets.xcassets */,
 				F42A75831EF18F4F00F8D5F5 /* LaunchScreen.storyboard */,
 				F42A75861EF18F4F00F8D5F5 /* Info.plist */,
@@ -77,6 +89,17 @@
 				F42A75761EF18F4E00F8D5F5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4F2C9D31EF824C300AE0E9E /* JCBreadCrumb */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2C9CD1EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.h */,
+				F4F2C9CE1EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.m */,
+				F4F2C9CF1EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.h */,
+				F4F2C9D01EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.m */,
+			);
+			name = JCBreadCrumb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42A757D1EF18F4E00F8D5F5 /* ViewController.m in Sources */,
+				F42A757D1EF18F4E00F8D5F5 /* MainNavigationController.m in Sources */,
+				F4F2C9D11EF824BA00AE0E9E /* JCBreadCrumbBarButtonItem.m in Sources */,
 				F42A757A1EF18F4E00F8D5F5 /* AppDelegate.m in Sources */,
 				F42A75771EF18F4E00F8D5F5 /* main.m in Sources */,
+				F4F2C9D21EF824BA00AE0E9E /* JCBreadCrumbMenuTableViewController.m in Sources */,
+				F42A758E1EF18F9B00F8D5F5 /* DummyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +336,7 @@
 				F42A758B1EF18F4F00F8D5F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
